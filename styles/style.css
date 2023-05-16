@@ -7,9 +7,10 @@
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1400px;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 header {
@@ -18,6 +19,14 @@ header {
   justify-content: space-between;
   width: 100%;
   padding: 20px 30px;
+  flex-wrap: wrap;
+}
+header:after {
+  content: "";
+  height: 2px;
+  width: 90%;
+  margin: 30px auto;
+  background: linear-gradient(90deg, #198539, #a0e2b4);
 }
 
 .header-logo {
@@ -66,7 +75,7 @@ header {
 
 .menu-contacts {
   text-align: center;
-  padding: 10px 0;
+  padding: 15px 0;
 }
 .menu-contacts span a {
   cursor: pointer;
@@ -74,6 +83,8 @@ header {
   outline: none;
   border: none;
   font-size: 16px;
+  letter-spacing: 1.1px;
+  scroll-behavior: smooth;
 }
 .menu-contacts span a:hover {
   color: #198539;
@@ -81,6 +92,38 @@ header {
   outline: none;
   text-decoration: none;
   cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+.leading-products {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.leading-products__info {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-self: center;
+  max-width: 40%;
+}
+.leading-products__info h2 {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 50px;
+}
+.leading-products__info p, .leading-products__info h2 {
+  align-self: center;
+}
+.leading-products img {
+  width: 650px;
+  height: 650px;
 }
 
 /*# sourceMappingURL=style.css.map */

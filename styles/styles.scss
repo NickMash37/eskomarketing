@@ -17,7 +17,7 @@
     border: none;
 }
 
-// Reset
+// Reset and common styles
 
 * {
     margin: 0;
@@ -27,12 +27,13 @@
 }
 
 .wrapper {
-    max-width: 1200px;
+    max-width: 1400px;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
 }
 
-// Header styles
+// Header styles start
 
 header {
     display: flex;
@@ -40,6 +41,15 @@ header {
     justify-content: space-between;
     width: 100%;
     padding: 20px 30px;
+    flex-wrap: wrap;
+
+    &:after {
+        content: '';
+        height: 2px;
+        width: 90%;
+        margin: 30px auto;
+        background: linear-gradient(90deg, #198539, #a0e2b4);
+    }
 }
 
 .header-logo {
@@ -84,14 +94,56 @@ header {
 
 .menu-contacts {
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
 
         span a {
             @include standart-link();
             font-size: 16px;
+            letter-spacing: 1.1px;
+            scroll-behavior: smooth;
 
             &:hover {
                 @include hover-links()
             }
         }
+}
+
+// Header styles end
+
+// Main styles start
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.leading-products {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-self: center;
+        max-width: 40%;
+
+        h2 {
+            width: 100%;
+            margin: 0 auto;
+            font-size: 50px;
+        }
+
+        p, h2 {
+            align-self: center;
+        }
+    }
+
+    img {
+        width: 650px;
+        height: 650px;
+    }
 }
