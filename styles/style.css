@@ -1,7 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.wrapper {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 30px;
+}
+
+.header-logo {
+  min-width: 20%;
+  font-weight: 700;
+  font-size: 30px;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+}
+.header-logo .subtext {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-around;
+  min-width: 70%;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-around;
+  align-items: center;
+  letter-spacing: 1.3px;
+}
+.menu-list__item a {
+  margin-right: 40px;
+  text-transform: uppercase;
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+.menu-list__item a:hover {
+  color: #198539;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menu-contacts {
+  text-align: center;
+  padding: 10px 0;
+}
+.menu-contacts span a {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  font-size: 16px;
+}
+.menu-contacts span a:hover {
+  color: #198539;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

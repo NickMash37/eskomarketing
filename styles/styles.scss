@@ -1,5 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+// Mixins
+
+@mixin hover-links {
+    color: #198539;
+    transition: all .3s ease-in-out;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@mixin standart-link {
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+// Reset
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.wrapper {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+}
+
+// Header styles
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 30px;
+}
+
+.header-logo {
+    min-width: 20%;
+    font-weight: 700;
+    font-size: 30px;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+
+    .subtext {
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-around;
+    min-width: 70%;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+    letter-spacing: 1.3px;
+
+    &__item a{
+        margin-right: 40px;
+        text-transform: uppercase;
+        font-size: 20px;
+        @include standart-link();
+
+        &:hover {
+            @include hover-links()
+        }
+    }
+}
+
+.menu-contacts {
+    text-align: center;
+    padding: 10px 0;
+
+        span a {
+            @include standart-link();
+            font-size: 16px;
+
+            &:hover {
+                @include hover-links()
+            }
+        }
 }
