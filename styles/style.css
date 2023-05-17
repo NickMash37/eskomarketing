@@ -126,6 +126,48 @@ main {
   height: 650px;
 }
 
+.callback {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  margin: 100px auto;
+}
+.callback h2 {
+  font-size: 30px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 50px;
+}
+.callback-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+}
+.callback-form input,
+.callback-form input:active {
+  width: 120%;
+  padding: 20px auto;
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+  font-size: 22px;
+}
+.callback-form__btn button {
+  padding: 20px 50px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  background: #198539;
+  color: #fff;
+  font-size: 20px;
+}
+
 footer {
   display: flex;
   gap: 100px;

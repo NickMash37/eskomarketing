@@ -148,6 +148,56 @@ main {
     }
 }
 
+// Callback form
+
+.callback {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    margin: 100px auto;
+
+    h2 {
+        font-size: 30px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 50px;
+    }
+
+        &-form {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 80%;
+
+            input,
+            input:active {
+                width: 120%;
+                padding: 20px auto;
+                border: none;
+                border-bottom: 1px solid gray;
+                outline: none;
+                font-size: 22px;
+            }
+
+                
+        &__btn {
+            button {
+                padding: 20px 50px;
+                @include standart-link();
+                background: #198539;
+                color: #fff;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+// Main styles end
+
 // Footer styles start
 
 footer {
