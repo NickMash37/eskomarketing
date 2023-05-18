@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+a:visited,
+a:active {
+  color: inherit;
+}
+
+.wrapper {
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 30px;
+  flex-wrap: wrap;
+}
+header:after {
+  content: "";
+  height: 2px;
+  width: 90%;
+  margin: 30px auto;
+  background: linear-gradient(90deg, #198539, #a0e2b4);
+}
+
+.header-logo {
+  min-width: 20%;
+  font-weight: 700;
+  font-size: 30px;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+}
+.header-logo .subtext {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-around;
+  min-width: 70%;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-around;
+  align-items: center;
+  letter-spacing: 1.3px;
+}
+.menu-list__item a {
+  color: #000;
+  margin-right: 40px;
+  text-transform: uppercase;
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+.menu-list__item a:hover {
+  color: #198539;
+  transition: all 0.3s ease-out;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #198539;
+}
+
+.menu-contacts {
+  text-align: center;
+  padding: 15px 0;
+}
+.menu-contacts span a {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  letter-spacing: 1.1px;
+  color: #000;
+}
+.menu-contacts span a:hover {
+  color: #198539;
+  transition: all 0.3s ease-out;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #198539;
+}
+.menu-contacts span a:visited, .menu-contacts span a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  margin: 50px auto;
+  text-align: center;
+  min-height: 100%;
+}
+main h2 {
+  margin-top: 50px;
+  font-size: 40px;
+  cursor: default;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-around;
+  margin: 100px auto;
+  width: 100%;
+}
+.contacts img {
+  width: 700px;
+  height: 400px;
+  border-radius: 10px;
+}
+.contacts-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.contacts-content h3 {
+  width: 100%;
+  text-transform: uppercase;
+  padding: 50px;
+  font-size: 26px;
+  cursor: default;
+}
+.contacts-content__messengers {
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.contacts-content__messengers img {
+  width: 50px;
+  height: 50px;
+}
+.contacts-content__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contacts-content__inner span {
+  font-size: 22px;
+}
+.contacts-content__inner span a {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  color: #000;
+  font-size: 30px;
+}
+
+footer {
+  display: flex;
+  gap: 100px;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  padding: 10px 30px;
+  position: static;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-size: 30px;
+}
+.footer-logo .subtext {
+  font-size: 12px;
+}
+
+.footer-menu {
+  margin: 0 10px 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-menu ul {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  text-align: center;
+  margin-right: 50px;
+}
+.footer-menu ul li {
+  font-size: 20px;
+  list-style-type: none;
+}
+.footer-menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+.footer-menu ul li a:hover {
+  transition: all 0.3s ease-out;
+  color: #198539;
+}
+.footer-menu a {
+  text-decoration: none;
+}
+.footer-menu a:active, .footer-menu a:visited {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+.footer-menu span {
+  margin-left: 18px;
+}
+.footer-menu span a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+.footer-menu span a:active, .footer-menu span a:visited {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+.footer-menu__tel {
+  width: 50px;
+  height: 50px;
+}
+
+/*# sourceMappingURL=contacts.css.map */

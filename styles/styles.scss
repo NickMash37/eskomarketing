@@ -4,7 +4,7 @@
 
 @mixin hover-links {
     color: #198539;
-    transition: all .3s ease-in-out;
+    transition: all .3s ease-out;
     outline: none;
     text-decoration: none;
     cursor: pointer;
@@ -24,6 +24,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
+}
+
+a:visited,
+a:active {
+    color: inherit;
 }
 
 .wrapper {
@@ -81,13 +86,15 @@ header {
     letter-spacing: 1.3px;
 
     &__item a{
+        color: #000;
         margin-right: 40px;
         text-transform: uppercase;
         font-size: 20px;
         @include standart-link();
 
         &:hover {
-            @include hover-links()
+            @include hover-links();
+            color: #198539;
         }
     }
 }
@@ -100,10 +107,17 @@ header {
             @include standart-link();
             font-size: 16px;
             letter-spacing: 1.1px;
-            scroll-behavior: smooth;
+            color: #000;
 
             &:hover {
-                @include hover-links()
+                @include hover-links();
+                color: #198539;
+            }
+
+            &:visited,
+            &:active {
+                text-decoration: none;
+                color: inherit;
             }
         }
 }

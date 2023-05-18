@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+// Mixins
+
+@mixin hover-links {
+    color: #198539;
+    transition: all .3s ease-out;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@mixin standart-link {
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+// Reset and common styles
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+a:visited,
+a:active {
+    color: inherit;
+}
+
+.wrapper {
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+// Header styles start
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 30px;
+    flex-wrap: wrap;
+
+    &:after {
+        content: '';
+        height: 2px;
+        width: 90%;
+        margin: 30px auto;
+        background: linear-gradient(90deg, #198539, #a0e2b4);
+    }
+}
+
+.header-logo {
+    min-width: 20%;
+    font-weight: 700;
+    font-size: 30px;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+
+    .subtext {
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-around;
+    min-width: 70%;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+    letter-spacing: 1.3px;
+
+    &__item a{
+        color: #000;
+        margin-right: 40px;
+        text-transform: uppercase;
+        font-size: 20px;
+        @include standart-link();
+
+        &:hover {
+            @include hover-links();
+            color: #198539;
+        }
+    }
+}
+
+.menu-contacts {
+    text-align: center;
+    padding: 15px 0;
+
+        span a {
+            @include standart-link();
+            font-size: 16px;
+            letter-spacing: 1.1px;
+            color: #000;
+
+            &:hover {
+                @include hover-links();
+                color: #198539;
+            }
+
+            &:visited,
+            &:active {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+}
+
+// Header styles end
+
+main {
+    margin: 50px auto;
+    text-align: center;
+    min-height: 100%;
+
+    h2 {
+        margin-top: 50px;
+        font-size: 40px;
+        cursor: default;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-around;
+    margin: 100px auto;
+    width: 100%;
+
+    img {
+        width: 700px;
+        height: 400px;
+        border-radius: 10px;
+    }
+
+    &-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+            width: 100%;
+            text-transform: uppercase;
+            padding: 50px;
+            font-size: 26px;
+            cursor: default;
+        }
+
+        &__messengers {
+            display: flex;
+            flex-direction: row;
+            gap: 70px;
+            justify-content: center;
+            margin-bottom: 50px;
+
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        &__inner {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            span {
+                font-size: 22px;
+
+                a {
+                    @include standart-link();
+                    color: #000;
+                    font-size: 30px;                    
+                }
+            } 
+        }
+    }
+}
+
+
+
+
+
+// Footer styles start
+
+footer {
+    display: flex;
+    gap: 100px;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    padding: 10px 30px;
+    position: static;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &-logo {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        font-size: 30px;
+
+        .subtext {
+            font-size: 12px;
+        }
+    }
+}
+
+.footer-menu {
+    margin: 0 10px 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        text-align: center;
+        margin-right: 50px;
+
+        li {
+            font-size: 20px;
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+                color: #fff;
+                text-transform: uppercase;
+                letter-spacing: 1.2px;
+
+                &:hover {
+                    transition: all .3s ease-out;
+                    color: #198539;
+                }
+            }
+        }
+    }   
+
+    a {
+        text-decoration: none;
+
+        &:active,
+        &:visited {
+            @include standart-link()
+        }
+    }
+
+    span {
+    margin-left: 18px;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+
+            &:active,
+            &:visited {
+                @include standart-link()
+            }
+        }
+    }
+}
+
+.footer-menu__tel {
+    width: 50px;
+    height: 50px;
+}
+
+// Footer styles end

@@ -6,6 +6,11 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+a:visited,
+a:active {
+  color: inherit;
+}
+
 .wrapper {
   max-width: 1400px;
   display: flex;
@@ -57,6 +62,7 @@ header:after {
   letter-spacing: 1.3px;
 }
 .menu-list__item a {
+  color: #000;
   margin-right: 40px;
   text-transform: uppercase;
   font-size: 20px;
@@ -67,10 +73,11 @@ header:after {
 }
 .menu-list__item a:hover {
   color: #198539;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-out;
   outline: none;
   text-decoration: none;
   cursor: pointer;
+  color: #198539;
 }
 
 .menu-contacts {
@@ -84,14 +91,19 @@ header:after {
   border: none;
   font-size: 16px;
   letter-spacing: 1.1px;
-  scroll-behavior: smooth;
+  color: #000;
 }
 .menu-contacts span a:hover {
   color: #198539;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-out;
   outline: none;
   text-decoration: none;
   cursor: pointer;
+  color: #198539;
+}
+.menu-contacts span a:visited, .menu-contacts span a:active {
+  text-decoration: none;
+  color: inherit;
 }
 
 main {
